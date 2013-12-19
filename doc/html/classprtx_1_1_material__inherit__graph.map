@@ -1,0 +1,8 @@
+<map id="prtx::Material" name="prtx::Material">
+<area shape="rect" id="node2" href="$classprtx_1_1_attributable.html" title="prtx::Attributable" alt="" coords="5,161,125,189"/>
+<area shape="rect" id="node4" href="$classprtx_1_1_comparable_content.html" title="prtx::ComparableContent" alt="" coords="149,161,320,189"/>
+<area shape="rect" id="node6" href="$classprtx_1_1_content.html" title="prtx::Content" alt="" coords="185,83,284,111"/>
+<area shape="rect" id="node10" href="$classprtx_1_1_builtin_material_attributes.html" title="prtx::BuiltinMaterialAttributes" alt="" coords="344,161,536,189"/>
+<area shape="rect" id="node12" href="$classprtx_1_1_builtin_attributes_getters.html" title="prtx::BuiltinAttributesGetters" alt="" coords="347,83,533,111"/>
+<area shape="rect" id="node14" href="$classprtx_1_1_builtin_attributes.html" title="prtx::BuiltinAttributes" alt="" coords="368,6,512,34"/>
+</map>

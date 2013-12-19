@@ -1,0 +1,14 @@
+<map id="prtx::Extension" name="prtx::Extension">
+<area shape="rect" id="node5" href="$classprtx_1_1_adaptor.html" title="prtx::Adaptor" alt="" coords="315,55,413,83"/>
+<area shape="rect" id="node9" href="$classprtx_1_1_decoder.html" title="prtx::Decoder" alt="" coords="313,157,415,185"/>
+<area shape="rect" id="node21" href="$classprtx_1_1_encoder.html" title="prtx::Encoder" alt="" coords="313,334,415,362"/>
+<area shape="rect" id="node7" href="$classprtx_1_1_stream_adaptor.html" title="prtx::StreamAdaptor" alt="" coords="475,5,616,33"/>
+<area shape="rect" id="node11" href="$classprtx_1_1_c_g_b_decoder.html" title="prtx::CGBDecoder" alt="" coords="480,55,611,83"/>
+<area shape="rect" id="node13" href="$classprtx_1_1_geometry_decoder.html" title="prtx::GeometryDecoder" alt="" coords="465,106,625,134"/>
+<area shape="rect" id="node15" href="$classprtx_1_1_material_decoder.html" title="prtx::MaterialDecoder" alt="" coords="471,157,620,185"/>
+<area shape="rect" id="node17" href="$classprtx_1_1_shader_decoder.html" title="prtx::ShaderDecoder" alt="" coords="473,207,617,235"/>
+<area shape="rect" id="node19" href="$classprtx_1_1_texture_decoder.html" title="prtx::TextureDecoder" alt="" coords="472,258,619,286"/>
+<area shape="rect" id="node23" href="$classprtx_1_1_geometry_encoder.html" title="prtx::GeometryEncoder" alt="" coords="465,309,625,337"/>
+<area shape="rect" id="node25" href="$classprtx_1_1_material_encoder.html" title="prtx::MaterialEncoder" alt="" coords="471,359,620,387"/>
+<area shape="rect" id="node27" href="$classprtx_1_1_texture_encoder.html" title="prtx::TextureEncoder" alt="" coords="473,410,617,438"/>
+</map>
