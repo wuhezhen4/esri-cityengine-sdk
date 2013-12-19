@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['range',['RANGE',['../namespaceprtx_1_1_encode_options_annotations.html#a90405f77e281182bf90fd5689e1c7248',1,'prtx::EncodeOptionsAnnotations']]],
+  ['readuri',['readURI',['../classprtx_1_1_data_backend.html#a660dab18f1e1a1867f5702c2f866c155',1,'prtx::DataBackend']]],
+  ['releasepersistentblob',['releasePersistentBlob',['../classprt_1_1_cache.html#a09ca633a92fc8b2ddf2020f3a00eb51e',1,'prt::Cache']]],
+  ['releasetransientblob',['releaseTransientBlob',['../classprt_1_1_cache.html#a05aa7cff51e3f8035cc9b7a249566ff6',1,'prt::Cache']]],
+  ['removeloghandler',['removeLogHandler',['../namespaceprt.html#a0e58922795880d9c4e5200f05ca0ae07',1,'prt']]],
+  ['removequery',['removeQuery',['../namespaceprtx_1_1_u_r_i_utils.html#a83543cfe5b67025b514db5ce4d8459a7',1,'prtx::URIUtils']]],
+  ['replaceextension',['replaceExtension',['../namespaceprtx_1_1_u_r_i_utils.html#a3997ca016b3c6203f1923168a167c4c1',1,'prtx::URIUtils']]],
+  ['replacefilename',['replaceFilename',['../namespaceprtx_1_1_u_r_i_utils.html#a1405c32410f562864b9d47922c916031',1,'prtx::URIUtils']]],
+  ['replacelastkeysegment',['replaceLastKeySegment',['../classprtx_1_1_resolve_map.html#a418c8909032803a54d1a5983063bcaa5',1,'prtx::ResolveMap']]],
+  ['reset',['reset',['../classprtx_1_1_bounding_box.html#a8b2ddf480feb2466c77d6a2a050ea479',1,'prtx::BoundingBox::reset()'],['../classprtx_1_1_geometry_builder.html#a0e33efd59a4fcf774741ad0cb0a2bd5a',1,'prtx::GeometryBuilder::reset()'],['../classprtx_1_1_mesh_builder.html#a32bc3ecd5421bf5cdcf39f66da38b1f1',1,'prtx::MeshBuilder::reset()']]],
+  ['resetmaterials',['resetMaterials',['../classprtx_1_1_mesh_builder.html#a4eacb986044eafd84e10feb46d73f6fb',1,'prtx::MeshBuilder']]],
+  ['resettoattributemap',['resetToAttributeMap',['../classprt_1_1_attribute_map_builder.html#acdbb9cf49232342b68ebeb50d7f4c2c4',1,'prt::AttributeMapBuilder']]],
+  ['resolve',['resolve',['../classprtx_1_1_adaptor.html#a6738d86ee354e7ffcbe2ad87e5c1c985',1,'prtx::Adaptor::resolve()'],['../classprtx_1_1_stream_adaptor.html#a3156008d46774841c5d8911634b8ad17',1,'prtx::StreamAdaptor::resolve()']]],
+  ['resolvecgb',['resolveCGB',['../classprtx_1_1_data_backend.html#a21233c35e771ad118dcd8fdcf7b22188',1,'prtx::DataBackend']]],
+  ['resolvegeometry',['resolveGeometry',['../classprt_1_1_initial_shape_builder.html#aa82c5c07b2ceca8b1c9527764976e28c',1,'prt::InitialShapeBuilder::resolveGeometry()'],['../classprtx_1_1_data_backend.html#ad1d2461919a6f070df5233fe2e3e27c2',1,'prtx::DataBackend::resolveGeometry()']]],
+  ['resolvekey',['resolveKey',['../classprtx_1_1_resolve_map.html#abc0d2061a7c582ce9407fc3442007689',1,'prtx::ResolveMap']]],
+  ['resolvekeywithurifallback',['resolveKeyWithURIFallback',['../classprtx_1_1_resolve_map.html#a51d5eba682871ff783b3ddd5f2fda461',1,'prtx::ResolveMap']]],
+  ['resolvemap',['ResolveMap',['../classprt_1_1_resolve_map.html',1,'prt']]],
+  ['resolvemap',['ResolveMap',['../classprtx_1_1_resolve_map.html',1,'prtx']]],
+  ['resolvemapbuilder',['ResolveMapBuilder',['../classprt_1_1_resolve_map_builder.html',1,'prt']]],
+  ['resolvematerial',['resolveMaterial',['../classprtx_1_1_data_backend.html#ad239e3c195bbf8b388becb32ad6de22f',1,'prtx::DataBackend']]],
+  ['resolvetexture',['resolveTexture',['../classprtx_1_1_data_backend.html#abfc60308e964823f02717b1d60eb5ef0',1,'prtx::DataBackend']]],
+  ['resolvetextures',['resolveTextures',['../classprt_1_1_initial_shape_builder.html#a7538cea31af66f052d71b0df8cde25e5',1,'prt::InitialShapeBuilder']]],
+  ['rulefileinfo',['RuleFileInfo',['../classprt_1_1_rule_file_info.html',1,'prt']]]
+];
