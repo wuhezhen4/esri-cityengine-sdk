@@ -370,12 +370,12 @@ bool initInputArgs(int argc, char *argv[], InputArgs& inputArgs) {
 	);
 	desc.add_options()(
 			"license-server,s",
-			boost::program_options::value<std::string>(&inputArgs.mLicHost)->default_value("27000@esrilm.esri.com"),
+			boost::program_options::value<std::string>(&inputArgs.mLicHost),
 			"License Server Host Name, example: 27000@myserver.example.com"
 	);
 	desc.add_options()(
 			"license-feature,f",
-			boost::program_options::value<std::string>(&inputArgs.mLicFeature)->default_value("CityEngAdvFx"),
+			boost::program_options::value<std::string>(&inputArgs.mLicFeature)->default_value("CityEngAdv"),
 			"License Feature to use, one of CityEngBasFx, CityEngBas, CityEngAdvFx, CityEngAdv"
 	);
 
