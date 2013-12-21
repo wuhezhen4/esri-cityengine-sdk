@@ -37,6 +37,8 @@ struct PRT_EXPORTS_API Version {
 	const char* mVersionMinor;
 	const char* mVersionBuild;
 	const char* mBuildConfig;
+	const char* mBuildOS;
+	const char* mBuildTC;
 	const char* mBuildDate;
 
 	const wchar_t* mwName;
@@ -46,6 +48,8 @@ struct PRT_EXPORTS_API Version {
 	const wchar_t* mwVersionMinor;
 	const wchar_t* mwVersionBuild;
 	const wchar_t* mwBuildConfig;
+	const wchar_t* mwBuildOS;
+	const wchar_t* mwBuildTC;
 	const wchar_t* mwBuildDate;
 };
 

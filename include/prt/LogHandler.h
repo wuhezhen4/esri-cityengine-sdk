@@ -50,7 +50,6 @@ public:
 	 */
 	virtual const LogLevel* getLevels(size_t* count) = 0;
 
-
 	/**
 	 * Implement this function to specify the format of the log message.
 	 * @param[out] dateTime Pointer to return whether the date and time should be added to the message.

@@ -20,7 +20,9 @@
 
 #include "API.h"
 
+
 namespace prt {
+
 
 // --- MAIN PRT API CALLS
 
@@ -29,12 +31,32 @@ namespace prt {
  *
  */
 struct FlexLicParams : LicParams {
-	const char* mActLibPath;	//!< the absolute path to the activation library (e.g. flexnet_prt.dll on windows)
-	const char* mFeature;		//!< for standard CE installations: The license feature string (char*), i.e. one of "CityEngBasFx;CityEngBas;CityEngAdvFx;CityEngAdv;"
-	const char* mHostName;      //!< host name of the license server
+
+	/**
+	 * The absolute path to the activation library (e.g. flexnet_prt.dll on windows).
+	 */
+	const char* mActLibPath;
+
+	/**
+	 * For standard CE installations: The license feature string (char*),
+	 * i.e. one of
+	 * - CityEngBasFx
+	 * - CityEngBas
+	 * - CityEngAdvFx
+	 * - CityEngAdv
+	 */
+	const char* mFeature;
+
+	/**
+	 * Host name of the license server (empty for node-locked licensing). For the
+	 * default flexnet port 27000, the syntax is \code 27000@myserver.example.com \endcode
+	 */
+	const char* mHostName;
 };
 
-}
+
+} // namespace prt
+
 
 #endif /* PRT_FLEXLICPARAMS_H_ */
 
