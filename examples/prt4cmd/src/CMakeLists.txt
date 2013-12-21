@@ -20,7 +20,7 @@ add_definitions(-DBOOST_MINOR_VERSION=${Boost_MINOR_VERSION})
 
 # if not specified on command line, assume default layout of CityEngine SDK 
 if(NOT prt_DIR)
-	set(prt_DIR "${PROJECT_SOURCE_DIR}/../../cmake")
+	set(prt_DIR "${PROJECT_SOURCE_DIR}/../../../cmake")
 endif()
 find_package(prt CONFIG)
 
@@ -45,3 +45,14 @@ elseif(${CMAKE_SYSTEM_NAME} STREQUAL "Darwin")
 
 endif()
 
+
+# install target
+
+set(CMAKE_INSTALL_PREFIX "${PROJECT_SOURCE_DIR}/../install" CACHE PATH "default install prefix" FORCE) 
+
+install(CODE "file(REMOVE_RECURSE ${CMAKE_INSTALL_PREFIX})")
+install(PROGRAMS ${CMAKE_BINARY_DIR}/prt4cmd${CMAKE_EXECUTABLE_SUFFIX} DESTINATION bin)
+install(FILES ${PRT_LIBRARIES} DESTINATION bin OPTIONAL)
+install(FILES ${PRT_EXT_LIBRARIES} DESTINATION lib)
+install(DIRECTORY ../data DESTINATION .)
+install(CODE "FILE(MAKE_DIRECTORY ${CMAKE_INSTALL_PREFIX}/output)")
