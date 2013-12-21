@@ -123,22 +123,63 @@ Inheritance diagram for prt::FlexLicParams:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a2295394a7c4b62dccafaf44a47746eec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2295394a7c4b62dccafaf44a47746eec"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprt_1_1_flex_lic_params.html#a2295394a7c4b62dccafaf44a47746eec">mActLibPath</a></td></tr>
-<tr class="memdesc:a2295394a7c4b62dccafaf44a47746eec"><td class="mdescLeft">&#160;</td><td class="mdescRight">the absolute path to the activation library (e.g. flexnet_prt.dll on windows) <br/></td></tr>
+<tr class="memitem:a2295394a7c4b62dccafaf44a47746eec"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprt_1_1_flex_lic_params.html#a2295394a7c4b62dccafaf44a47746eec">mActLibPath</a></td></tr>
 <tr class="separator:a2295394a7c4b62dccafaf44a47746eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afde3a7fad95810b3972d2151f0fca89c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afde3a7fad95810b3972d2151f0fca89c"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprt_1_1_flex_lic_params.html#afde3a7fad95810b3972d2151f0fca89c">mFeature</a></td></tr>
-<tr class="memdesc:afde3a7fad95810b3972d2151f0fca89c"><td class="mdescLeft">&#160;</td><td class="mdescRight">for standard CE installations: The license feature string (char*), i.e. one of "CityEngBasFx;CityEngBas;CityEngAdvFx;CityEngAdv;" <br/></td></tr>
+<tr class="memitem:afde3a7fad95810b3972d2151f0fca89c"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprt_1_1_flex_lic_params.html#afde3a7fad95810b3972d2151f0fca89c">mFeature</a></td></tr>
 <tr class="separator:afde3a7fad95810b3972d2151f0fca89c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a326b604753cdba7040b8d6ea0a33a303"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a326b604753cdba7040b8d6ea0a33a303"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprt_1_1_flex_lic_params.html#a326b604753cdba7040b8d6ea0a33a303">mHostName</a></td></tr>
-<tr class="memdesc:a326b604753cdba7040b8d6ea0a33a303"><td class="mdescLeft">&#160;</td><td class="mdescRight">host name of the license server <br/></td></tr>
+<tr class="memitem:a326b604753cdba7040b8d6ea0a33a303"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprt_1_1_flex_lic_params.html#a326b604753cdba7040b8d6ea0a33a303">mHostName</a></td></tr>
 <tr class="separator:a326b604753cdba7040b8d6ea0a33a303"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Structure for licensing information for the flexnet loader. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a2295394a7c4b62dccafaf44a47746eec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* prt::FlexLicParams::mActLibPath</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The absolute path to the activation library (e.g. flexnet_prt.dll on windows). </p>
+
+</div>
+</div>
+<a class="anchor" id="afde3a7fad95810b3972d2151f0fca89c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* prt::FlexLicParams::mFeature</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>For standard CE installations: The license feature string (char*), i.e. one of</p>
+<ul>
+<li>CityEngBasFx</li>
+<li>CityEngBas</li>
+<li>CityEngAdvFx</li>
+<li>CityEngAdv </li>
+</ul>
+
+</div>
+</div>
+<a class="anchor" id="a326b604753cdba7040b8d6ea0a33a303"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* prt::FlexLicParams::mHostName</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Host name of the license server (empty for node-locked licensing). For the default flexnet port 27000, the syntax is</p>
+<div class="fragment"><div class="line">27000@myserver.example.com </div>
+</div><!-- fragment --> 
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="_flex_lic_params_8h_source.html">FlexLicParams.h</a></li>
 </ul>
 </div><!-- contents -->
@@ -147,7 +188,7 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceprt.html">prt</a></li><li class="navelem"><a class="el" href="structprt_1_1_flex_lic_params.html">FlexLicParams</a></li>
-    <li class="footer">Generated on Wed Dec 18 2013 16:36:47 for ESRI Procedural Runtime by
+    <li class="footer">Generated on Fri Dec 20 2013 18:19:20 for ESRI Procedural Runtime by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

@@ -128,27 +128,34 @@ $(document).ready(function(){initNavTree('_flex_lic_params_8h_source.html','');}
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;API.h&quot;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span>prt {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">// --- MAIN PRT API CALLS</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span>prt {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="structprt_1_1_flex_lic_params.html">   31</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structprt_1_1_flex_lic_params.html">FlexLicParams</a> : <a class="code" href="structprt_1_1_lic_params.html">LicParams</a> {</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="structprt_1_1_flex_lic_params.html#a2295394a7c4b62dccafaf44a47746eec">   32</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="structprt_1_1_flex_lic_params.html#a2295394a7c4b62dccafaf44a47746eec" title="the absolute path to the activation library (e.g. flexnet_prt.dll on windows)">mActLibPath</a>;    </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="structprt_1_1_flex_lic_params.html#afde3a7fad95810b3972d2151f0fca89c">   33</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="structprt_1_1_flex_lic_params.html#afde3a7fad95810b3972d2151f0fca89c" title="for standard CE installations: The license feature string (char*), i.e. one of &quot;CityEngBasFx;CityEngB...">mFeature</a>;       </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="structprt_1_1_flex_lic_params.html#a326b604753cdba7040b8d6ea0a33a303">   34</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="structprt_1_1_flex_lic_params.html#a326b604753cdba7040b8d6ea0a33a303" title="host name of the license server">mHostName</a>;      </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* PRT_FLEXLICPARAMS_H_ */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// --- MAIN PRT API CALLS</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="structprt_1_1_flex_lic_params.html">   33</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structprt_1_1_flex_lic_params.html">FlexLicParams</a> : <a class="code" href="structprt_1_1_lic_params.html">LicParams</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="structprt_1_1_flex_lic_params.html#a2295394a7c4b62dccafaf44a47746eec">   38</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="structprt_1_1_flex_lic_params.html#a2295394a7c4b62dccafaf44a47746eec">mActLibPath</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="structprt_1_1_flex_lic_params.html#afde3a7fad95810b3972d2151f0fca89c">   48</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="structprt_1_1_flex_lic_params.html#afde3a7fad95810b3972d2151f0fca89c">mFeature</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="structprt_1_1_flex_lic_params.html#a326b604753cdba7040b8d6ea0a33a303">   54</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="structprt_1_1_flex_lic_params.html#a326b604753cdba7040b8d6ea0a33a303">mHostName</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;} <span class="comment">// namespace prt</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* PRT_FLEXLICPARAMS_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e104a5fd3f1a5c6eb1edb871fc217c8e.html">prt</a></li><li class="navelem"><b>FlexLicParams.h</b></li>
-    <li class="footer">Generated on Wed Dec 18 2013 16:36:46 for ESRI Procedural Runtime by
+    <li class="footer">Generated on Fri Dec 20 2013 18:19:20 for ESRI Procedural Runtime by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>
