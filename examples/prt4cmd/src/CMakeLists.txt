@@ -36,10 +36,7 @@ include_directories(/Volumes/Volume2/jenkins_slave/workspace/prt4cmd/aad5cc30/pr
 target_link_libraries(prt4cmd /Volumes/Volume2/jenkins_slave/workspace/prt4cmd/aad5cc30/prtsdk/bin/libcom.esri.prt.core.dylib /opt/local/lib/libboost_program_options-mt.dylib;/opt/local/lib/libboost_filesystem-mt.dylib)
 
 if(Darwin STREQUAL "Linux")
-	add_custom_command(
-		TARGET prt4cmd POST_BUILD
-		COMMAND /usr/bin/patchelf --set-rpath "\\\$$ORIGIN" prt4cmd
-	)
+	set(CMAKE_EXE_LINKER_FLAGS "  -Wl,-rpath,'$ORIGIN'")
 
 elseif(Darwin STREQUAL "Darwin")
 	add_custom_command(TARGET prt4cmd POST_BUILD COMMAND /usr/bin/install_name_tool
