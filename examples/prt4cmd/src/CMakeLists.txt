@@ -36,10 +36,7 @@ include_directories(C:/hudson/workspace/prt4cmd/f65d3bb2/prtsdk/include)
 target_link_libraries(prt4cmd C:/hudson/workspace/prt4cmd/f65d3bb2/prtsdk/bin/com.esri.prt.core.lib optimized;C:/local/boost_1_54_0/lib64-msvc-10.0/libboost_program_options-vc100-mt-1_54.lib;debug;C:/local/boost_1_54_0/lib64-msvc-10.0/libboost_program_options-vc100-mt-gd-1_54.lib;optimized;C:/local/boost_1_54_0/lib64-msvc-10.0/libboost_filesystem-vc100-mt-1_54.lib;debug;C:/local/boost_1_54_0/lib64-msvc-10.0/libboost_filesystem-vc100-mt-gd-1_54.lib)
 
 if(Windows STREQUAL "Linux")
-	add_custom_command(
-		TARGET prt4cmd POST_BUILD
-		COMMAND /usr/bin/patchelf --set-rpath "\\\$$ORIGIN" prt4cmd
-	)
+	set(CMAKE_EXE_LINKER_FLAGS " /STACK:10000000 /machine:x64  -Wl,-rpath,'$ORIGIN'")
 
 elseif(Windows STREQUAL "Darwin")
 	add_custom_command(TARGET prt4cmd POST_BUILD COMMAND 
