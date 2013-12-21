@@ -147,32 +147,35 @@ $(document).ready(function(){initNavTree('_resolve_map_8h_source.html','');});
 <div class="line"><a name="l00078"></a><span class="lineno"><a class="code" href="classprt_1_1_resolve_map_builder.html">   78</a></span>&#160;<span class="keyword">class </span>PRT_EXPORTS_API <a class="code" href="classprt_1_1_resolve_map_builder.html">ResolveMapBuilder</a> : <span class="keyword">public</span> <a class="code" href="classprt_1_1_object.html">Object</a> {</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">static</span> <a class="code" href="classprt_1_1_resolve_map_builder.html">ResolveMapBuilder</a>* create(<a class="code" href="namespaceprt.html#acf0b3066b48a14bccb756bee9a4700e4">Status</a>* status = 0);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">static</span> <a class="code" href="classprt_1_1_resolve_map_builder.html">ResolveMapBuilder</a>* createFromResolveMap(<a class="code" href="classprt_1_1_resolve_map.html">ResolveMap</a> <span class="keyword">const</span>* resolveMap, <a class="code" href="namespaceprt.html#acf0b3066b48a14bccb756bee9a4700e4">Status</a>* status = 0);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classprt_1_1_resolve_map.html">ResolveMap</a> <span class="keyword">const</span>* <a class="code" href="namespaceprt.html#a83f4df2336ff85b8633767076a823937">createResolveMap</a>(<a class="code" href="namespaceprt.html#acf0b3066b48a14bccb756bee9a4700e4">Status</a>* status = 0) = 0;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classprt_1_1_resolve_map.html">ResolveMap</a> <span class="keyword">const</span>* createResolveMapAndReset(<a class="code" href="namespaceprt.html#acf0b3066b48a14bccb756bee9a4700e4">Status</a>* status = 0) = 0;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="namespaceprt.html#acf0b3066b48a14bccb756bee9a4700e4">Status</a> addEntry(<span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* key, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *uri) = 0;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="namespaceprt.html#acf0b3066b48a14bccb756bee9a4700e4">Status</a> setDownstreamMap(<span class="keyword">const</span> <a class="code" href="classprt_1_1_resolve_map.html">ResolveMap</a>* map) = 0;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <a class="code" href="classprt_1_1_resolve_map_builder.html">ResolveMapBuilder</a>();</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classprt_1_1_resolve_map_builder.html">ResolveMapBuilder</a>();</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;};</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;} <span class="comment">// namespace prt</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">static</span> <a class="code" href="classprt_1_1_resolve_map_builder.html">ResolveMapBuilder</a>* createFromResolveMap(<a class="code" href="classprt_1_1_resolve_map.html">ResolveMap</a> <span class="keyword">const</span>* resolveMap, <a class="code" href="namespaceprt.html#acf0b3066b48a14bccb756bee9a4700e4">Status</a>* status = 0);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classprt_1_1_resolve_map.html">ResolveMap</a> <span class="keyword">const</span>* <a class="code" href="namespaceprt.html#a83f4df2336ff85b8633767076a823937">createResolveMap</a>(<a class="code" href="namespaceprt.html#acf0b3066b48a14bccb756bee9a4700e4">Status</a>* status = 0) = 0;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classprt_1_1_resolve_map.html">ResolveMap</a> <span class="keyword">const</span>* createResolveMapAndReset(<a class="code" href="namespaceprt.html#acf0b3066b48a14bccb756bee9a4700e4">Status</a>* status = 0) = 0;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="namespaceprt.html#acf0b3066b48a14bccb756bee9a4700e4">Status</a> addEntry(<span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* key, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *uri) = 0;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="namespaceprt.html#acf0b3066b48a14bccb756bee9a4700e4">Status</a> setDownstreamMap(<span class="keyword">const</span> <a class="code" href="classprt_1_1_resolve_map.html">ResolveMap</a>* map) = 0;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <a class="code" href="classprt_1_1_resolve_map_builder.html">ResolveMapBuilder</a>();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classprt_1_1_resolve_map_builder.html">ResolveMapBuilder</a>();</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;};</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* PRT_RESOLVEMAP_H_ */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;} <span class="comment">// namespace prt</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* PRT_RESOLVEMAP_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e104a5fd3f1a5c6eb1edb871fc217c8e.html">prt</a></li><li class="navelem"><b>ResolveMap.h</b></li>
-    <li class="footer">Generated on Wed Dec 18 2013 16:36:46 for ESRI Procedural Runtime by
+    <li class="footer">Generated on Fri Dec 20 2013 18:19:20 for ESRI Procedural Runtime by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

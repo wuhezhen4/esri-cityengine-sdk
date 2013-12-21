@@ -83,6 +83,7 @@ public:
      * @returns a new ResolveMapBuilder instance or 0 on error.
 	 */
 	static ResolveMapBuilder* create(Status* status = 0);
+
 	/**
 	 * Creates a new builder instance which is initialized to the passed ResolveMap. The builder instance must be destroyed by the caller.
 	 # @param      resolveMap ResolveMap to initialize this builder with.
@@ -97,6 +98,7 @@ public:
      * @returns a new ResolveMap instance or 0 on error.
 	 */
 	virtual ResolveMap const* createResolveMap(Status* status = 0) = 0;
+
 	/**
 	 * Creates a new ResolveMap instance and resets the builder. The instnace must be destoyed by the caller.
      * @param[out] stat Optional pointer to return the status.
@@ -111,6 +113,7 @@ public:
 	 * @returns status.
 	 */
 	virtual Status addEntry(const wchar_t* key, const wchar_t *uri) = 0;
+
 	/**
 	 * Puts a ResolveMap in place downstream. In key lookups, the lookup propagates to the downstream map
 	 * if it is not found in the current map.
