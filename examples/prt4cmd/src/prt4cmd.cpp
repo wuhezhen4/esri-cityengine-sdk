@@ -32,7 +32,7 @@
 
 
 // Some file name definitions
-const char*		FILE_FLEXNET_LIB	= "libflexnet_prt.so";
+const char*		FILE_FLEXNET_LIB	= "flexnet_prt";
 const char* 	FILE_LOG			= "prt4cmd.log";
 const wchar_t*	FILE_CGA_ERROR		= L"CGAErrors.txt";
 const wchar_t*	FILE_CGA_PRINT		= L"CGAPrint.txt";
@@ -86,13 +86,13 @@ std::wstring toOSWideFromOSNarrow(const std::string& osString);
 bool isNumeric(const std::wstring& str, double& val);
 std::string objectToXML(prt::Object const* obj);
 void codecInfoToXML(InputArgs& inputArgs);
-
 template<typename C> std::basic_string<C> toStr(const boost::filesystem::path& p);
 template<> std::wstring toStr(const boost::filesystem::path& p);
 template<> std::string toStr(const boost::filesystem::path& p);
-
 template<typename C> std::basic_string<C> toFileURI(const boost::filesystem::path& p);
 template<> std::wstring toFileURI(const boost::filesystem::path& p);
+std::string getSharedLibraryPrefix();
+std::string getSharedLibrarySuffix();
 
 
 // ok, let's start the party
@@ -118,7 +118,7 @@ int main (int argc, char *argv[]) {
 	boost::filesystem::path extPath = rootPath / "lib";
 	std::wstring cppExtPath = toStr<wchar_t>(extPath);
 	const wchar_t* cExtPath = cppExtPath.c_str();
-	boost::filesystem::path flexLib = rootPath / "bin" / FILE_FLEXNET_LIB;
+	boost::filesystem::path flexLib = rootPath / "bin" / (getSharedLibraryPrefix() + FILE_FLEXNET_LIB + getSharedLibrarySuffix());
 	assert(boost::filesystem::exists(flexLib));
 
 	// -- setup the licensing information
@@ -546,3 +546,30 @@ const prt::AttributeMap* createValidatedOptions(const wchar_t* encID, const prt:
 	encInfo->destroy();
 	return validatedOptions;
 }
+
+
+std::string getSharedLibraryPrefix() {
+#if defined(_WIN32)
+	return "";
+#elif defined(__APPLE__)
+	return "lib";
+#elif defined(linux)
+	return "lib";
+#else
+#	error unsupported build platform
+#endif
+}
+
+
+std::string getSharedLibrarySuffix() {
+#if defined(_WIN32)
+	return ".dll";
+#elif defined(__APPLE__)
+	return ".dylib";
+#elif defined(linux)
+	return ".so";
+#else
+#	error unsupported build platform
+#endif
+}
+
