@@ -118,12 +118,13 @@ int main (int argc, char *argv[]) {
 	boost::filesystem::path extPath = rootPath / "lib";
 	std::wstring cppExtPath = toStr<wchar_t>(extPath);
 	const wchar_t* cExtPath = cppExtPath.c_str();
-	boost::filesystem::path flexLib = rootPath / "bin" / (getSharedLibraryPrefix() + FILE_FLEXNET_LIB + getSharedLibrarySuffix());
-	assert(boost::filesystem::exists(flexLib));
+	boost::filesystem::path fsFlexLib = rootPath / "bin" / (getSharedLibraryPrefix() + FILE_FLEXNET_LIB + getSharedLibrarySuffix());
+	assert(boost::filesystem::exists(fsFlexLib));
+	std::string flexLib = fsFlexLib.string();
 
 	// -- setup the licensing information
 	prt::FlexLicParams flp;
-	flp.mActLibPath = reinterpret_cast<const char*>(flexLib.string().c_str());
+	flp.mActLibPath = flexLib.c_str();
 	flp.mFeature = inputArgs.mLicFeature.c_str();
 	flp.mHostName = inputArgs.mLicHost.c_str();
 
