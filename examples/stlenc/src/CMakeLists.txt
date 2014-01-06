@@ -10,7 +10,10 @@ project(${PROJECT})
 
 ### external dependencies
 
-# none, so far...
+find_package(Boost)
+include_directories(${Boost_INCLUDE_DIR})
+link_directories(${Boost_LIBRARY_DIRS})
+add_definitions(-DBOOST_MINOR_VERSION=${Boost_MINOR_VERSION})
 
 
 ### prt dependencies
@@ -24,10 +27,7 @@ find_package(prt CONFIG)
 
 ### build target
 
-add_executable(${PROJECT} stlenc.cpp)
-
-SET(CMAKE_INSTALL_RPATH "")
-SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH FALSE)
+add_library(${PROJECT} SHARED stlenc.cpp STLEncoder.cpp)
 
 include_directories(${PRT_INCLUDE_PATH})
 target_link_libraries(${PROJECT} ${PRT_LIBRARY})
