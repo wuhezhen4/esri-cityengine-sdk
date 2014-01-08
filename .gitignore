@@ -12,5 +12,5 @@
 *.la
 *.a
 
-# ignore any eclipse projects
-/.project
+# any eclipse helper projects
+.project
