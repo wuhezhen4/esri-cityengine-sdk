@@ -86,7 +86,7 @@ bin/prt4cmd \
 ```
 Upon completion you should find an wavefront obj file inside the install/output folder with mtl and textures.
 
-![myhouse62.png](images/myhouse62.png "Building with height=62.0")
+![myhouse62.png](doc/images/myhouse62.png "Building with height=62.0")
 
 #### Generate the building with a different height
 By adding the line "-a height:float=30" we change the height of the building from its default value of 62.0 to 30.0:
@@ -103,7 +103,7 @@ bin/prt4cmd \
 	-g data/candler_lot.obj
 ```
 
-![myhouse30.png](images/myhouse30.png "Building with height=30.0")
+![myhouse30.png](doc/images/myhouse30.png "Building with height=30.0")
 
 ## Resources
 
