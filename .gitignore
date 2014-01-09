@@ -12,4 +12,5 @@
 *.la
 *.a
 
+# any eclipse helper projects
 .project
