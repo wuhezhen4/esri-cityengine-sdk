@@ -2,38 +2,51 @@
 
 The Esri CityEngine 2013 is based on the procedural runtime, which is the underlying engine that supports two GP tools in ArcGIS 10.2 and drives procedural symbology in the release of ArcGIS Professional. The CityEngine SDK enables you as a 3rd party developer to extend CityEngine with additional import and export formats and storage backends beyond simple files. Moreover, you can integrate the procedural runtime in your own client applications taking full advantage of the procedural core without running CityEngine or ArcGIS.
 
+This document explains how to install the CityEngine SDK and how to build the included examples. For in-depth documentation please see the doc directory.
+
 ## Features
 * C++ SDK
 * Documentation
 * Example Code
 
+## Documentation
+* Whitepaper: [doc/esri_prt_whitepaper.pdf](doc/esri_prt_whitepaper.pdf)
+* Architecture: [doc/esri_prt_architecture.pdf](doc/esri_prt_architecture.pdf)
+* API Reference: [doc/html/index.html](doc/html/index.html)
+
 ## Requirements
-* CityEngine 2013 License
-* C++ Compiler (MSVC 10.0 or later / GCC 4.1.2 or later / Clang 3.0 or later)
+* License for CityEngine 2013 (or later)
+* C++ Compiler: MSVC 10.0 or later / GCC 4.1.2 or later / Clang 3.0 or later
+* Optional: to compile PRTX extensions you need to use these exact C++ compiler versions:
+  * Windows: Visual Studio 2010 SP1 64bit (cl.exe 16.00.40219.01 for x64)
+  * OSX: XCode 4.2.1, MacOSX SDK 10.7 (GCC 4.2.1 (Based on Apple Inc. build 5658, LLVM build 2336.1.00)
+  * Linux: GCC 4.1.2 64bit
 * Linux/OSX: GNU Make 3.82 or later
 * Windows: NMake 10.0 or later (part of Visual Studio [Express])
 * CMake 2.8.10 or later (http://www.cmake.org)
 * boost 1.34 or later (http://www.boost.org)
 
 ## Installation Instructions
-The SDK is installed by simply downloading and unzipping an archive from the Releases/Tags page. For more convenience and easy updates you may also want to directly clone this repository (there is one branch per platform).
+* The Simple Way: The SDK is installed by simply downloading and unzipping an archive from the Releases/Tags page.
+* The Advanced Way: For more convenience and easy updates you may want to directly clone this repository (there is one branch per platform).
 
-## The prt4cmd CLI example
-The bundled prt4cmd project is a comprehensive example of the PRT API. It allows you to apply a rule package onto a initial shape and write the resulting geometry to disk. We encourage you to modify and play with this example source code in order to fully explore the possibilities of the CityEngine SDK.
+## Examples
+The SDK contains a (growing) number of examples with source code. Foremost, the prt4cmd example is a comprehensive example of the PRT API. It allows you to apply a rule package onto a initial shape and write the resulting geometry to disk. We encourage you to modify and play with this example source code in order to fully explore the possibilities of the CityEngine SDK.
 
-### Building the CLI example
-1. cd into the examples/prt4cmd directory
-2. Create an empty "build" directory in parallel to the src directory of the CLI example and cd into it
-3. Generate the make files:
-  * on Linux/OSX: `cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release ../src`
-  * on Windows: `cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release ../src`
-4. Build and install:
-  * on Linux/OSX: `make install`
-  * on Windows: `nmake install`
+### Generic Build Instructions
+The following build instructions apply to all examples. See the individual example sections for any exceptions or special steps.
+  1. cd into the examples/[example] directory
+  2. Create an empty "build" directory in parallel to the src directory of the CLI example and cd into it
+  3. Generate the make files:
+    * on Linux/OSX: `cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release ../src`
+    * on Windows: `cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release ../src`
+  4. Build and install:
+    * on Linux/OSX: `make install`
+    * on Windows: `nmake install`
 
-This will create a ready-to-run installation of prt4cmd in the "install" directory in parallel to the src and build directories.
+This will create a ready-to-run or ready-to-use installation of the example in the "install" directory in parallel to the src and build directories.
 
-BOOST NOTE: if you do not have boost installed on a system path, please extend the cmake call in step 3 like this:
+BOOST NOTE: if the example requires boost and if you do not have boost installed on a system path, please extend the cmake call in step 3 like this:
 ```
 cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release \
 	-DBOOST_INCLUDEDIR=xxx \
@@ -42,8 +55,7 @@ cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release \
 	../src 
 ```
 
-
-### Running the CLI example
+### The prt4cmd CLI example
 Note: all examples below assume that your current working directory is the "install" directory from above.
 
 #### Displaying the help screen
@@ -105,6 +117,22 @@ bin/prt4cmd \
 
 ![myhouse30.png](doc/images/myhouse30.png "Building with height=30.0")
 
+### The stlenc custom encoder example
+The stlenc example demonstrates the use of the PRTX API to create custom encoders which are ready to be used in prt-based host applications like the CityEngine itself (version 2013.1 and later).
+
+NOTE: Libraries based on PRTX must be compiled with a specific compiler version, see requirements.
+
+#### Use the STL encoder in the prt4cmd example
+  1. Build the prt4cmd and stlenc examples using the generic build instructions above
+  2. Copy stlenc/install/lib/libprt_stlenc.*  into prt4cmd/install/lib/
+  3. The STL encoder can now be invoked with the id 'com.esri.prt.examples.STLEncoder'
+
+#### Use the STL encoder in the CityEngine
+  1. Build the stlenc example using the generic build instructions above.
+  2. Find the CityEngine installation location on your system -> $CELOC.
+  3. Copy stlenc/install/lib/libprt_stlenc.* into ```$CELOC/plugins/com.esri.prt.clients.ce.X_1.0.0/lib/``` (X depends on your system).
+  4. Restart CityEngine, a new entry called "STL Encoder" should be listed in the model export wizard.
+
 ## Resources
 
 * https://www.facebook.com/CityEngine
@@ -116,7 +144,7 @@ Find a bug or want to request a new feature?  Please let us know by submitting a
 
 ## Contributing
 
-Anyone and everyone is welcome to contribute. 
+Anyone and everyone is welcome to contribute and to extend and improve the examples.
 
 ## Licensing
 
