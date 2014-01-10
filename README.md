@@ -16,6 +16,7 @@ This document explains how to install the CityEngine SDK and how to build the in
 
 ## Requirements
 * License for CityEngine 2013 (or later)
+* Supported OS: Windows 7, Windows 8, MacOSX 10.7, MacOSX 10.8, RHEL 6.4
 * C++ Compiler: MSVC 10.0 or later / GCC 4.1.2 or later / Clang 3.0 or later
 * Optional: to compile PRTX extensions you need to use these exact C++ compiler versions:
   * Windows: Visual Studio 2010 SP1 64bit (cl.exe 16.00.40219.01 for x64)
@@ -120,7 +121,10 @@ bin/prt4cmd \
 ### The stlenc custom encoder example
 The stlenc example demonstrates the use of the PRTX API to create custom encoders which are ready to be used in prt-based host applications like the CityEngine itself (version 2013.1 and later).
 
-NOTE: Libraries based on PRTX must be compiled with a specific compiler version, see requirements.
+Note 1: Libraries based on PRTX must be compiled with a specific compiler version, see requirements.
+
+Note 2: To make an encoder option appear in the CityEngine UI, the following annotations are mandatory: 
+LABEL, ORDER, GROUP and DESCRIPTION (see STLEncoderFactory::createInstance() in STLEncoder.cpp
 
 #### Use the STL encoder in the prt4cmd example
   1. Build the prt4cmd and stlenc examples using the generic build instructions above

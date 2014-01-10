@@ -166,7 +166,7 @@ STLEncoderFactory* STLEncoderFactory::createInstance() {
 	encoderInfoBuilder.setDefaultOptions(amb->createAttributeMap());
 
 	// CityEngine requires the following annotations to create an UI for an option:
-	// label, order, group and description
+	// @LABEL, @ORDER, @GROUP and @DESCRIPTION
 	prtx::EncodeOptionsAnnotator eoa(encoderInfoBuilder);
 	eoa.option(EO_BASE_NAME).
 			setLabel(L"Base Name").
