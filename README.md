@@ -124,23 +124,14 @@ bin/prt4cmd \
 ![myhouse30.png](doc/images/myhouse30.png "Building with height=30.0")
 
 ### The stlenc custom encoder example
-The stlenc example demonstrates the use of the PRTX API to create custom encoders which are ready to be used in prt-based host applications like the CityEngine itself.
+The stlenc example demonstrates the use of the PRTX API to create custom encoders which are ready to be used in prt-based host applications.
 
-Note 1: Libraries based on PRTX must be compiled with a specific compiler version, see requirements.
-
-Note 2: To make an encoder option appear in the CityEngine UI, the following annotations are mandatory: 
-LABEL, ORDER, GROUP and DESCRIPTION (see STLEncoderFactory::createInstance() in STLEncoder.cpp
+Note: Libraries based on PRTX must be compiled with a specific compiler version, see requirements.
 
 #### Use the STL encoder in the prt4cmd example
   1. Build the prt4cmd and stlenc examples using the generic build instructions above
   2. Copy stlenc/install/lib/libprt_stlenc.*  into prt4cmd/install/lib/
   3. The STL encoder can now be invoked with the id 'com.esri.prt.examples.STLEncoder'
-
-#### Use the STL encoder in the CityEngine
-  1. Build the stlenc example using the generic build instructions above.
-  2. Find the CityEngine installation location on your system -> $CELOC.
-  3. Copy stlenc/install/lib/libprt_stlenc.* into ```$CELOC/plugins/com.esri.prt.clients.ce.X_1.0.0/lib/``` (X depends on your system).
-  4. Restart CityEngine, a new entry called "STL Encoder" should be listed in the model export wizard.
 
 ## Resources
 
