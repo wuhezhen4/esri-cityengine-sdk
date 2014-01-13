@@ -17,10 +17,16 @@ This document explains how to install the CityEngine SDK and how to build the in
 ## Requirements
 * License for CityEngine 2013 (or later)
 * Supported OS: Windows 7, Windows 8, MacOSX 10.7, MacOSX 10.8, RHEL 6.4
-* C++ Compiler: MSVC 10.0 or later / GCC 4.1.2 or later / Clang 3.0 or later
-* Optional: to compile PRTX extensions you need to use these exact C++ compiler versions:
-  * Windows: Visual Studio 2010 SP1 64bit (cl.exe 16.00.40219.01 for x64)
-  * OSX: XCode 4.2.1, MacOSX SDK 10.7 (GCC 4.2.1 (Based on Apple Inc. build 5658, LLVM build 2336.1.00)
+* C++ Compiler:
+  * Windows: MSVC 10.0 or later
+  * MacOSX: Clang 3.0 or later
+  * Linux: GCC 4.1.2 or later
+* (Optional) To compile PRTX extensions (e.g. custom encoders) you need to use these **exact** C++ compiler versions:
+  * Windows: Microsoft C++ Compiler (cl.exe) 16.00.40219.01 for x64, included in either one of these products (i.e. choose one):
+    * Visual Studio 2010 SP1 64bit
+    * Windows SDK 7.1 64bit with Visual C++ 2010 Compiler SP1 (Attention: [known issue with SP1](https://connect.microsoft.com/VisualStudio/feedback/details/660584))
+  * MacOSX: Apple GCC 4.2.1 included in:
+    * XCode 4.2.1 and MacOSX SDK 10.7 (Based on Apple Inc. build 5658, LLVM build 2336.1.00)
   * Linux: GCC 4.1.2 64bit
 * Linux/OSX: GNU Make 3.82 or later
 * Windows: NMake 10.0 or later (part of Visual Studio [Express])
@@ -47,7 +53,7 @@ The following build instructions apply to all examples. See the individual examp
 
 This will create a ready-to-run or ready-to-use installation of the example in the "install" directory in parallel to the src and build directories.
 
-BOOST NOTE: if the example requires boost and if you do not have boost installed on a system path, please extend the cmake call in step 3 like this:
+BOOST NOTE: if the example build script complains about "boost not found", please extend the cmake call in step 3 like this:
 ```
 cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release \
 	-DBOOST_INCLUDEDIR=xxx \
@@ -68,17 +74,15 @@ bin/prt4cmd
 #### Specifying the license
 The SDK will make use of your installed CityEngine license (node-locked or by license server).
 The "-f" argument specifies the type of license:
-- CityEngBasFx (basic network license)
-- CityEngBas (basic node-locked license)
-- CityEngAdvFx (advanced network license)
-- CityEngAdv (advanced node-locked license)
+- CityEngBas (basic network license)
+- CityEngBasFx (basic node-locked license)
+- CityEngAdv (advanced network license)
+- CityEngAdvFx (advanced node-locked license)
 
 The "-s" argument is only needed for the network license types. 
 
 ```
-bin/prt4cmd \
-	-f CityEngAdvFx \
-	-s 27000@example.com
+bin/prt4cmd -f CityEngAdvFx -s 27000@example.com
 ```
 
 For simplicity, the license arguments have been omitted in the below examples.
@@ -87,10 +91,10 @@ For simplicity, the license arguments have been omitted in the below examples.
 #### Generate a building with the included example rule package
 The following call will apply the rule package "data/candler.02.rpk" onto the initial shape geometry "data/candler_lot.obj".
 
+*Windows Note: On the Windows command line, please use `Default$Lot` instead of `Default\$Lot` and omit the backslashes.*
 ```
 bin/prt4cmd \
-	-l 3 \
-	-p data/candler.02.rpk \
+	-l 3 -p data/candler.02.rpk \
 	-a ruleFile:string=bin/candler.01.cgb \
 	-a startRule:string=Default\$Lot \
 	-e com.esri.prt.codecs.OBJEncoder \
@@ -104,6 +108,7 @@ Upon completion you should find an wavefront obj file inside the install/output 
 #### Generate the building with a different height
 By adding the line "-a height:float=30" we change the height of the building from its default value of 62.0 to 30.0:
 
+*Windows Note: On the Windows command line, please use `Default$Lot` instead of `Default\$Lot` and omit the backslashes.*
 ```
 bin/prt4cmd \
 	-l 3 \
@@ -119,7 +124,7 @@ bin/prt4cmd \
 ![myhouse30.png](doc/images/myhouse30.png "Building with height=30.0")
 
 ### The stlenc custom encoder example
-The stlenc example demonstrates the use of the PRTX API to create custom encoders which are ready to be used in prt-based host applications like the CityEngine itself (version 2013.1 and later).
+The stlenc example demonstrates the use of the PRTX API to create custom encoders which are ready to be used in prt-based host applications like the CityEngine itself.
 
 Note 1: Libraries based on PRTX must be compiled with a specific compiler version, see requirements.
 
