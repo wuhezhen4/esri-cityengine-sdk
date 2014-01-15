@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="esri_prt_55px.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">ESRI Procedural Runtime
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.0.1209</span>
    </div>
   </td>
  </tr>
@@ -122,6 +122,8 @@ Inheritance diagram for prt::InitialShapeBuilder:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a48ac594440e9f6ddf88e8388d62381b1"><td class="memItemLeft" align="right" valign="top">virtual int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprt_1_1_initial_shape_builder.html#a48ac594440e9f6ddf88e8388d62381b1">computeSeed</a> ()=0</td></tr>
+<tr class="separator:a48ac594440e9f6ddf88e8388d62381b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a787a537907d67e4a226bf2056798175c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classprt_1_1_initial_shape.html">InitialShape</a> const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprt_1_1_initial_shape_builder.html#a787a537907d67e4a226bf2056798175c">createInitialShapeAndReset</a> (<a class="el" href="namespaceprt.html#acf0b3066b48a14bccb756bee9a4700e4">Status</a> *status=0)=0</td></tr>
 <tr class="separator:a787a537907d67e4a226bf2056798175c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa82c5c07b2ceca8b1c9527764976e28c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceprt.html#acf0b3066b48a14bccb756bee9a4700e4">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classprt_1_1_initial_shape_builder.html#aa82c5c07b2ceca8b1c9527764976e28c">resolveGeometry</a> (wchar_t const *key, <a class="el" href="classprt_1_1_resolve_map.html">ResolveMap</a> const *resolveMap=0, <a class="el" href="classprt_1_1_cache.html">Cache</a> *cache=0)=0</td></tr>
@@ -155,6 +157,31 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:ac96dbcd8de3255280d1d1d8692f618ee inherit pro_methods_classprt_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a48ac594440e9f6ddf88e8388d62381b1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int32_t prt::InitialShapeBuilder::computeSeed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compute a random seed from the initial shape geometry.</p>
+<dl class="section return"><dt>Returns</dt><dd>A random seed computed from the initial shape geometry. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a9542fa980c9822a5d333e4961e49b326"></a>
 <div class="memitem">
 <div class="memproto">
@@ -603,7 +630,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceprt.html">prt</a></li><li class="navelem"><a class="el" href="classprt_1_1_initial_shape_builder.html">InitialShapeBuilder</a></li>
-    <li class="footer">Generated on Sat Dec 21 2013 20:49:08 for ESRI Procedural Runtime by
+    <li class="footer">Generated on Wed Jan 15 2014 13:32:17 for ESRI Procedural Runtime by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>

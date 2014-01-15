@@ -5,7 +5,7 @@
 	</style>
 <body>
 <h1>Esri Procedural Runtime Encoder/Decoder Reference</h1>
-<small>(Automatically generated from PRT 1.0.0; Build Date: 2013-12-17 18:50; Build Configuration: PRT_BC_REL PRT_CC_OPT)</small><p>This is the PRT reference documentation for all built-in encoders and decoders.</p>
+<small>(Automatically generated from PRT 1.0.1209; Build Date: 2014-01-14 18:51; Build Configuration: PRT_BC_REL PRT_CC_OPT)</small><p>This is the PRT reference documentation for all built-in encoders and decoders.</p>
 <p>The encoder documentation lists for each encoder its supported encoder options. In PRT, the encoder options
 	are stored in an object of type prt::AttributeMap, therefore the term "attribute" is used synonymously in this
 	document for a single encoder option. Each attribute consists of a type, a default value and (optional)
@@ -2337,6 +2337,65 @@
 	</table></td>
 </tr>
 	<tr>
+<td>shapeNameDelimiter</td>
+<td>str</td>
+<td>_</td>
+<td><table>
+		<tr>
+<td>@Label</td>
+<td>:str = Shape Name Delimiter<br>
+</td>
+</tr>
+		<tr>
+<td>@Description</td>
+<td>:str = Delimiting character for resolution of shape name clashes.<br>
+</td>
+</tr>
+		<tr>
+<td>@Order</td>
+<td>:float = 7060<br>
+</td>
+</tr>
+		<tr>
+<td>@Group</td>
+<td>name:str = Advanced Settings<br>order:float = 5<br>
+</td>
+</tr>
+	</table></td>
+</tr>
+	<tr>
+<td>facesWithHoles</td>
+<td>str</td>
+<td>PASS</td>
+<td><table>
+		<tr>
+<td>@Label</td>
+<td>:str = Faces With Holes<br>
+</td>
+</tr>
+		<tr>
+<td>@Description</td>
+<td>:str = Specifies how faces with holes should be handled during the export.<br>
+</td>
+</tr>
+		<tr>
+<td>@Order</td>
+<td>:float = 9080<br>
+</td>
+</tr>
+		<tr>
+<td>@Group</td>
+<td>name:str = Geometry Settings<br>order:float = 2<br>
+</td>
+</tr>
+		<tr>
+<td>@Range</td>
+<td>PASS:str = Write as holes<br>TRIANGULATE_FACES_WITH_HOLES:str = Triangulate faces with holes<br>DISCARD_HOLES:str = Discard holes<br>CONVERT_HOLES_TO_FACES:str = Convert holes to faces<br>
+</td>
+</tr>
+	</table></td>
+</tr>
+	<tr>
 <td>textureQuality</td>
 <td>float</td>
 <td>1</td>
@@ -2369,32 +2428,33 @@
 	</table></td>
 </tr>
 	<tr>
-<td>shapeNameDelimiter</td>
-<td>str</td>
-<td>_</td>
+<td>triangulateMeshes</td>
+<td>bool</td>
+<td>true</td>
 <td><table>
 		<tr>
 <td>@Label</td>
-<td>:str = Shape Name Delimiter<br>
+<td>:str = Triangulate Meshes<br>
 </td>
 </tr>
 		<tr>
 <td>@Description</td>
-<td>:str = Delimiting character for resolution of shape name clashes.<br>
+<td>:str = Triangulate resulting meshes.<br>
 </td>
 </tr>
 		<tr>
 <td>@Order</td>
-<td>:float = 7060<br>
+<td>:float = 9070<br>
 </td>
 </tr>
 		<tr>
 <td>@Group</td>
-<td>name:str = Advanced Settings<br>order:float = 5<br>
+<td>name:str = Geometry Settings<br>order:float = 2<br>
 </td>
 </tr>
 	</table></td>
 </tr>
+	
 	
 	<tr>
 <td>exportContent</td>
@@ -2428,6 +2488,7 @@
 </tr>
 	</table></td>
 </tr>
+	
 </table>
 <h3><a name="com.esri.prt.codecs.OBJEncoder">Wavefront OBJ (com.esri.prt.codecs.OBJEncoder)</a></h3>
 <p>Encodes geometry into the Wavefront OBJ format.</p>
