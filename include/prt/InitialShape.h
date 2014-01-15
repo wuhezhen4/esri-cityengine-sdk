@@ -246,6 +246,13 @@ public:
 			                     wchar_t const*        name,
 			                     AttributeMap const*   attributes,
 			                     ResolveMap const*	   resolveMap) = 0;
+
+	/**
+	 * Compute a random seed from the initial shape geometry.
+	 *
+	 * @return A random seed computed from the initial shape geometry.
+	 */
+	virtual int32_t computeSeed() = 0;
 };
 
 
