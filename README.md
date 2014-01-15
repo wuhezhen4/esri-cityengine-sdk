@@ -134,9 +134,9 @@ Note: Libraries based on PRTX must be compiled with a specific compiler version,
   3. The STL encoder can now be invoked with the id 'com.esri.prt.examples.STLEncoder'
 
 ## Resources
-
-* https://www.facebook.com/CityEngine
-* https://twitter.com/CityEngine
+* Forum: http://forums.arcgis.com/forums/204-CityEngine-General-Discussion
+* Facebook: https://www.facebook.com/CityEngine
+* Twitter: https://twitter.com/CityEngine
 
 ## Issues
 
