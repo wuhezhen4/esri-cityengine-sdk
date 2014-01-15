@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="esri_prt_55px.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">ESRI Procedural Runtime
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.0.1209</span>
    </div>
   </td>
  </tr>
@@ -186,6 +186,9 @@ $(document).ready(function(){initNavTree('functions_0x63.html','');});
 <li>close()
 : <a class="el" href="classprt_1_1_simple_output_callbacks.html#a8c953d67ee23266e50c13fc736338b0b">prt::SimpleOutputCallbacks</a>
 </li>
+<li>computeSeed()
+: <a class="el" href="classprt_1_1_initial_shape_builder.html#a48ac594440e9f6ddf88e8388d62381b1">prt::InitialShapeBuilder</a>
+</li>
 <li>contains()
 : <a class="el" href="classprtx_1_1_file_extensions.html#a45189966d9231189684cae7fb8fb69da">prtx::FileExtensions</a>
 </li>
@@ -199,7 +202,8 @@ $(document).ready(function(){initNavTree('functions_0x63.html','');});
 : <a class="el" href="classprt_1_1_callbacks.html#a5d293cfb6f32162d77094834208137e3">prt::Callbacks</a>
 </li>
 <li>create()
-: <a class="el" href="classprtx_1_1_encoder_factory.html#af379c01539cf0deba18429770b4b5ede">prtx::EncoderFactory</a>
+: <a class="el" href="classprtx_1_1_encode_preparator.html#a1c06299fa79f5bd193c9e4ccfb0bee5f">prtx::EncodePreparator</a>
+, <a class="el" href="classprtx_1_1_encoder_factory.html#af379c01539cf0deba18429770b4b5ede">prtx::EncoderFactory</a>
 , <a class="el" href="classprtx_1_1_encoder_info_builder.html#a873f5cb56f9fc03ea3cc33932280f4a7">prtx::EncoderInfoBuilder</a>
 , <a class="el" href="classprtx_1_1_extension_factory.html#ad0b6ac0c2c98dd3ceb3f228b57b03186">prtx::ExtensionFactory</a>
 , <a class="el" href="classprtx_1_1_geometry_builder.html#afaee76c9a1c40307460645d3031082d2">prtx::GeometryBuilder</a>
@@ -209,36 +213,34 @@ $(document).ready(function(){initNavTree('functions_0x63.html','');});
 , <a class="el" href="classprtx_1_1_depth_first_iterator.html#a09e7fda0af93000b44dfa6479221c434">prtx::DepthFirstIterator</a>
 , <a class="el" href="classprtx_1_1_breadth_first_iterator.html#a92d1947e15e6749a773fa3b1c069f6fe">prtx::BreadthFirstIterator</a>
 , <a class="el" href="classprtx_1_1_leaf_iterator.html#acbf91272b837798c774be0ca96f78cfa">prtx::LeafIterator</a>
-, <a class="el" href="classprt_1_1_attribute_map_builder.html#abfa8aab0cfb370af0438d1833c36b9fa">prt::AttributeMapBuilder</a>
 , <a class="el" href="classprtx_1_1_initial_shape_iterator.html#a7f8d05b77c9ce7365b107467075cf3ba">prtx::InitialShapeIterator</a>
+, <a class="el" href="classprt_1_1_attribute_map_builder.html#abfa8aab0cfb370af0438d1833c36b9fa">prt::AttributeMapBuilder</a>
 , <a class="el" href="classprtx_1_1_selected_shapes_iterator.html#ae88e1a5ad3bf8d0b022f364ce94fab1d">prtx::SelectedShapesIterator</a>
-, <a class="el" href="classprt_1_1_file_output_callbacks.html#a062622d354857186a421b40b69e6fcf9">prt::FileOutputCallbacks</a>
 , <a class="el" href="classprtx_1_1_c_g_a_print_iterator.html#aeffe1f59df906b79b6221d4db23a1825">prtx::CGAPrintIterator</a>
+, <a class="el" href="classprt_1_1_file_output_callbacks.html#a062622d354857186a421b40b69e6fcf9">prt::FileOutputCallbacks</a>
 , <a class="el" href="classprtx_1_1_c_g_a_error_iterator.html#abc7097d70e5bf2e2ad1f1a9bb187df93">prtx::CGAErrorIterator</a>
-, <a class="el" href="classprt_1_1_initial_shape_builder.html#a9542fa980c9822a5d333e4961e49b326">prt::InitialShapeBuilder</a>
 , <a class="el" href="classprtx_1_1_c_g_a_report_iterator.html#a4ad51de666f757b6037866aa196f49af">prtx::CGAReportIterator</a>
+, <a class="el" href="classprt_1_1_initial_shape_builder.html#a9542fa980c9822a5d333e4961e49b326">prt::InitialShapeBuilder</a>
 , <a class="el" href="classprtx_1_1_u_r_i.html#a8cad35fe40ef9537026131f4ee4222cc">prtx::URI</a>
 , <a class="el" href="classprt_1_1_console_log_handler.html#a5f1dbe2b5f3b63479b079e3326b7c065">prt::ConsoleLogHandler</a>
-, <a class="el" href="classprtx_1_1_u_r_i.html#a96ea4280f0878019f256f407dd01b107">prtx::URI</a>
 , <a class="el" href="classprt_1_1_file_log_handler.html#a227db06a4ae4963c371c85aa7d894df1">prt::FileLogHandler</a>
 , <a class="el" href="classprt_1_1_memory_output_callbacks.html#ac4faa3c88c5e57db914dca01eb70f57a">prt::MemoryOutputCallbacks</a>
 , <a class="el" href="classprt_1_1_occlusion_set.html#af8534ea0c4dfc71d25e9c00f97216281">prt::OcclusionSet</a>
 , <a class="el" href="classprt_1_1_resolve_map_builder.html#af2fdbfc6a71fe9c78ae7f990691e2b4f">prt::ResolveMapBuilder</a>
 , <a class="el" href="classprtx_1_1_annotation_builder.html#aa26f6ed2a3681b86df1d52528b0b2dda">prtx::AnnotationBuilder</a>
 , <a class="el" href="classprtx_1_1_builder.html#a34a74a03e9b3089697f85db130e05cee">prtx::Builder&lt; C &gt;</a>
-, <a class="el" href="classprtx_1_1_encode_preparator.html#a1c06299fa79f5bd193c9e4ccfb0bee5f">prtx::EncodePreparator</a>
 </li>
 <li>createAndReset()
-: <a class="el" href="classprtx_1_1_shader_builder.html#a99b9eacda19cf9d9785670ed393030eb">prtx::ShaderBuilder</a>
+: <a class="el" href="classprtx_1_1_annotation_builder.html#a83794260d0ece87c5d043cdd3fd5457f">prtx::AnnotationBuilder</a>
 , <a class="el" href="classprtx_1_1_material_builder.html#ac2f3e2e907b8901c95e90a79e66d2157">prtx::MaterialBuilder</a>
 , <a class="el" href="classprtx_1_1_mesh_builder.html#add243388902621c74141c3e98e91882a">prtx::MeshBuilder</a>
-, <a class="el" href="classprtx_1_1_encoder_info_builder.html#a183f7e7fa2f7eecc4a3c7000d1ef4680">prtx::EncoderInfoBuilder</a>
-, <a class="el" href="classprtx_1_1_annotation_builder.html#a83794260d0ece87c5d043cdd3fd5457f">prtx::AnnotationBuilder</a>
 , <a class="el" href="classprtx_1_1_builder.html#a3a7c0aeb6d453d61767ec7255378e02f">prtx::Builder&lt; C &gt;</a>
 , <a class="el" href="classprtx_1_1_geometry_builder.html#aed74299032ab6888ca39ce8d29f32334">prtx::GeometryBuilder</a>
+, <a class="el" href="classprtx_1_1_encoder_info_builder.html#a183f7e7fa2f7eecc4a3c7000d1ef4680">prtx::EncoderInfoBuilder</a>
+, <a class="el" href="classprtx_1_1_shader_builder.html#a99b9eacda19cf9d9785670ed393030eb">prtx::ShaderBuilder</a>
 </li>
 <li>createAnnotation()
-: <a class="el" href="classprtx_1_1_annotation_builder.html#a4eed9360579e033bfedd9f3b26fa487d">prtx::AnnotationBuilder</a>
+: <a class="el" href="classprtx_1_1_annotation_builder.html#aa5f4062937291a5d0e8c55d3bf67ef4d">prtx::AnnotationBuilder</a>
 </li>
 <li>createAttributeMap()
 : <a class="el" href="classprt_1_1_attribute_map_builder.html#ad3250e6f6764512780abddf7c6e372f6">prt::AttributeMapBuilder</a>
@@ -284,8 +286,8 @@ $(document).ready(function(){initNavTree('functions_0x63.html','');});
 , <a class="el" href="classprtx_1_1_p_r_t_x_builder.html#a8930c436fbe421895a268caa6aa6c3fe">prtx::PRTXBuilder&lt; C &gt;</a>
 </li>
 <li>createSharedAndReset()
-: <a class="el" href="classprtx_1_1_p_r_t_x_builder.html#ab016f7f11802c156eec3b7b6300d641c">prtx::PRTXBuilder&lt; C &gt;</a>
-, <a class="el" href="classprtx_1_1_p_r_t_builder.html#a5ca736e3dda03ae1c64e0f01564f6ca1">prtx::PRTBuilder&lt; C &gt;</a>
+: <a class="el" href="classprtx_1_1_p_r_t_builder.html#a5ca736e3dda03ae1c64e0f01564f6ca1">prtx::PRTBuilder&lt; C &gt;</a>
+, <a class="el" href="classprtx_1_1_p_r_t_x_builder.html#ab016f7f11802c156eec3b7b6300d641c">prtx::PRTXBuilder&lt; C &gt;</a>
 </li>
 <li>createStream()
 : <a class="el" href="classprtx_1_1_stream_adaptor.html#a3c7e74973264a7fac4becdf0853beacc">prtx::StreamAdaptor</a>
@@ -308,7 +310,7 @@ $(document).ready(function(){initNavTree('functions_0x63.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Dec 21 2013 20:49:09 for ESRI Procedural Runtime by
+    <li class="footer">Generated on Wed Jan 15 2014 13:32:18 for ESRI Procedural Runtime by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>
