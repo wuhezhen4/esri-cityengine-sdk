@@ -14,3 +14,4 @@
 
 # any eclipse helper projects
 .project
+/.pydevproject

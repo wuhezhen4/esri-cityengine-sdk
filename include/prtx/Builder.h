@@ -43,7 +43,7 @@ namespace prtx {
  * A builder is useful to create (multiple) immutable objects with similar states.
  */
 template<typename C> class Builder : boost::noncopyable {
-public:
+protected:
 
 	/**
 	 * Creates an instance of type C based on the current builder state. Does not modify the builder state.

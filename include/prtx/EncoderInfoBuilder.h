@@ -120,6 +120,10 @@ public:
 	 * Adds an annotation to a specific option. Use the prtx::AnnotationBuilder to create annotations.
 	 * There is also the prtx::EncodeOptionsAnnotator helper class for a more convenient way to set annotations.
 	 *
+	 * Note: To make an encoder option appear in the CityEngine UI (version 2013.1 and later),
+	 * the following annotations are mandatory:
+	 * LABEL, ORDER, GROUP and DESCRIPTION
+	 *
 	 * @param [in] key The encoder option attribute key to annotate.
 	 * @param [in] a The annotation instance. The ownership will be transferred. All annotations will be destroyed
 	 * when the encoder info instance is destroyed.

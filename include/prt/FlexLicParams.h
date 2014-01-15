@@ -40,10 +40,10 @@ struct FlexLicParams : LicParams {
 	/**
 	 * For standard CE installations: The license feature string (char*),
 	 * i.e. one of
-	 * - CityEngBasFx
-	 * - CityEngBas
-	 * - CityEngAdvFx
-	 * - CityEngAdv
+	 * - CityEngBas (basic network license)
+	 * - CityEngBasFx (basic node-locked license)
+	 * - CityEngAdv (advanced network license)
+	 * - CityEngAdvFx (advanced node-locked license)
 	 */
 	const char* mFeature;
 
