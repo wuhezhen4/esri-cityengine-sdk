@@ -40,7 +40,7 @@ if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
 
 elseif(${CMAKE_SYSTEM_NAME} STREQUAL "Darwin")
 	add_custom_command(TARGET ${PROJECT} POST_BUILD COMMAND ${CMAKE_INSTALL_NAME_TOOL}
-		-change @rpath/libcom.esri.prt.core.dylib ${PRT_CORE_LIBRARY}
+		-change ${PRT_CORE_LIBRARY} @rpath/libcom.esri.prt.core.dylib
 		${PROJECT})
 
 endif()
