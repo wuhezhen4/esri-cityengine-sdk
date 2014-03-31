@@ -19,7 +19,7 @@ This document explains how to install the CityEngine SDK and how to build the in
 * Supported OS: Windows 7, Windows 8, MacOSX 10.7, MacOSX 10.8, RHEL 6.4
 * C++ Compiler:
   * Windows: MSVC 10.0 or later
-  * MacOSX: Clang 3.0 or later
+  * MacOSX: GCC 4.2.1 or later
   * Linux: GCC 4.1.2 or later
 * (Optional) To compile PRTX extensions (e.g. custom encoders) you need to use these **exact** C++ compiler versions:
   * Windows: Microsoft C++ Compiler (cl.exe) 16.00.40219.01 for x64, included in either one of these products (i.e. choose one):
